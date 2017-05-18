@@ -1,5 +1,4 @@
 {
     "require": {
-        "atk4/ui": "dev-master"
-    }
+        "atk4\/atk4":"4.4.x-dev}
 }
