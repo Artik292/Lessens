@@ -4,8 +4,69 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d2ffe21fa9e116fba6fdc156563bbcc",
+    "content-hash": "4058797b955ff90956363d85bdd789cd",
     "packages": [
+        {
+            "name": "atk4/atk4",
+            "version": "4.4.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atk4/atk4.git",
+                "reference": "6acbe000cd88ddf1084aa9a4c5e5f65130d66f9e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atk4/atk4/zipball/6acbe000cd88ddf1084aa9a4c5e5f65130d66f9e",
+                "reference": "6acbe000cd88ddf1084aa9a4c5e5f65130d66f9e",
+                "shasum": ""
+            },
+            "require": {
+                "atk4/data": "^1.1",
+                "atk4/ui": "*"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "*",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "": "lib/"
+                },
+                "files": [
+                    "/lib/static.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Romans Malinovskis",
+                    "email": "romans@agiletoolkit.org",
+                    "homepage": "https://nearly.guru/"
+                }
+            ],
+            "description": "Agile UI - User Interface Component Library",
+            "homepage": "https://agiletoolkit.org/",
+            "keywords": [
+                "Agile",
+                "atk4",
+                "button",
+                "crud",
+                "form",
+                "framework",
+                "gadget",
+                "generator",
+                "grid",
+                "render",
+                "ui",
+                "web",
+                "widget"
+            ],
+            "time": "2017-04-18 09:51:11"
+        },
         {
             "name": "atk4/core",
             "version": "1.2.2",
@@ -56,16 +117,16 @@
         },
         {
             "name": "atk4/data",
-            "version": "1.1.16",
+            "version": "1.1.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/atk4/data.git",
-                "reference": "c6674bccb565b93db0f90ea142a59f700038f471"
+                "reference": "2d78476c5c02c5218951ee6da7c69e61be067a16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/data/zipball/c6674bccb565b93db0f90ea142a59f700038f471",
-                "reference": "c6674bccb565b93db0f90ea142a59f700038f471",
+                "url": "https://api.github.com/repos/atk4/data/zipball/2d78476c5c02c5218951ee6da7c69e61be067a16",
+                "reference": "2d78476c5c02c5218951ee6da7c69e61be067a16",
                 "shasum": ""
             },
             "require": {
@@ -109,7 +170,7 @@
                 "query",
                 "sql"
             ],
-            "time": "2017-04-28T09:00:39+00:00"
+            "time": "2017-05-18T22:16:41+00:00"
         },
         {
             "name": "atk4/dsql",
@@ -167,28 +228,27 @@
         },
         {
             "name": "atk4/ui",
-            "version": "dev-master",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/atk4/ui.git",
-                "reference": "042d3b43fa4d7d4fa598c8df2db87364e79a22f6"
+                "reference": "527573d4572eec7d71665e447b27b090c1fa3a8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/ui/zipball/042d3b43fa4d7d4fa598c8df2db87364e79a22f6",
-                "reference": "042d3b43fa4d7d4fa598c8df2db87364e79a22f6",
+                "url": "https://api.github.com/repos/atk4/ui/zipball/527573d4572eec7d71665e447b27b090c1fa3a8a",
+                "reference": "527573d4572eec7d71665e447b27b090c1fa3a8a",
                 "shasum": ""
             },
             "require": {
-                "atk4/core": "^1.1.11",
-                "atk4/data": "^1.1.11",
+                "atk4/core": "^1.2",
+                "atk4/data": "^1.1",
+                "fzaninotto/faker": "*",
                 "php": ">=5.6.0"
             },
             "require-dev": {
                 "codeclimate/php-test-reporter": "*",
-                "fzaninotto/faker": "*",
-                "phpunit/phpunit": "4.*",
-                "semantic/ui": "*"
+                "phpunit/phpunit": "<6"
             },
             "type": "library",
             "autoload": {
@@ -222,14 +282,62 @@
                 "web",
                 "widget"
             ],
-            "time": "2017-03-10 21:05:35"
+            "time": "2017-05-18T22:39:51+00:00"
+        },
+        {
+            "name": "fzaninotto/faker",
+            "version": "v1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fzaninotto/Faker.git",
+                "reference": "44f9a286a04b80c76a4e5fb7aad8bb539b920123"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/44f9a286a04b80c76a4e5fb7aad8bb539b920123",
+                "reference": "44f9a286a04b80c76a4e5fb7aad8bb539b920123",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3|^7.0"
+            },
+            "require-dev": {
+                "ext-intl": "*",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": []
+            },
+            "autoload": {
+                "psr-4": {
+                    "Faker\\": "src/Faker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Zaninotto"
+                }
+            ],
+            "description": "Faker is a PHP library that generates fake data for you.",
+            "keywords": [
+                "data",
+                "faker",
+                "fixtures"
+            ],
+            "time": "2016-04-29T12:21:54+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "atk4/ui": 20
+        "atk4/atk4": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
