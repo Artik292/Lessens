@@ -2,7 +2,7 @@
 
 require 'vendor/autoload.php';
 
-
+use \atk4\ui\Header;
 
 $app = new \atk4\ui\App('Get and Links');
 $layout = $app->initLayout('Centered');
