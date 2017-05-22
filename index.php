@@ -5,14 +5,23 @@ require 'vendor/autoload.php';
 $app = new \atk4\ui\App('Icons and Links');
 $layout = $app->initLayout('Centered');
 
-$button1 = $app->layout->add(['Button', 'LINK TO PHP FILE','iconRight'=>'tasks']);
-$button1->link(['4_2', 'id'=>123, 'name'=>'John']);
-$button2 = $app->layout->add(['Button', 'LINK TO 	TEXT FILE','iconRight'=>'book']);
+$button1 = $app->layout->add([
+	'View', 
+	'LINK TO PHP FILE'
+]);
+$button1->link(['4_2', 'id'=>123, 'name'=>'John']);  //если не указывать куда, то ссылается сам на себя
+
+$button2 = $app->layout->add(
+	['Button', 'LINK TO 	TEXT FILE','iconRight'=>'book']
+);
 $button2->link('4_text.txt'); 
+
 $button3 = $app->layout->add(['Button', 'LINK TO 	PDF FILE','iconRight'=>'student']);
 $button3->link('4_pdf.pdf'); 
+
 $button4 = $app->layout->add(['Button', 'LINK TO 	FOTO','iconRight'=>'image']);
 $button4->link('4_image.jpg'); 
+
 $button5 = $app->layout->add(['Button', 'LINK TO 	ICONS','iconRight'=>'idea']);
 $button5->link('https://semantic-ui.com/elements/icon.html'); 
 
