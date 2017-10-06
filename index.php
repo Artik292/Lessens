@@ -1,10 +1,12 @@
 <?PHP
 
-require 'vendor/autoload.php';
+echo “Works”;
+
+/*require 'vendor/autoload.php';
 $app = new \atk4\ui\App('Registration');
 $app->initLayout('Centered');
 
-/*$button = $app->add(['Label', 'hello world']);
+$button = $app->add(['Label', 'hello world']);
 $button->link('http://google.com/');
 
 $label = $app->add(['Label', 'hello world']);
