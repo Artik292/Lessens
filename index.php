@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 $app = new \atk4\ui\App('Registration');
 $app->initLayout('Centered');
 
-$button = $app->add(['Label', 'hello world']);
+$button = $app->add(['Button', 'hello world']);
 
 /*$img = 'https://www.nasa.gov/sites/default/files/thumbnails/image/ocs_iss_0.jpg';
 $button = $app->add(['Label', 'hello world','image'=>$img]);
