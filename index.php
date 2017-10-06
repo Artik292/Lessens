@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 $app = new \atk4\ui\App('Registration');
 $app->initLayout('Centered');
 
-$button = $app->add(['Label', 'hello world']);
+/*$button = $app->add(['Label', 'hello world']);
 $button->link('http://google.com/');
 
 $label = $app->add(['Label', 'hello world']);
@@ -23,4 +23,4 @@ $message = new \atk4\ui\Message('Message Title');
 $app->add($message);
 
 $img = 'http://www.nasa.gov/sites/default/files/thumbnails/image/ocs_iss_0.jpg';
-$icon = $app->add(['Image', $img, 'disabled']);
+$icon = $app->add(['Image', $img, 'disabled']);*/
