@@ -20,7 +20,8 @@ class ExceptionTest extends \PHPUnit_Framework_TestCase
         // params
         $this->assertEquals(['a1' => 111, 'a2' => 222], $m->getParams());
 
-        $m = new Exception('TestIt');
+        $m = new Exception('PrevError');
+        $m = new Exception('TestIt', 123, $m);
         $m->addMoreInfo('a1', 222);
         $m->addMoreInfo('a2', 333);
 
@@ -30,6 +31,14 @@ class ExceptionTest extends \PHPUnit_Framework_TestCase
         // get colorful text
         $ret = $m->getColorfulText();
         $this->assertRegExp('/TestIt/', $ret);
+        $this->assertRegExp('/PrevError/', $ret);
+        $this->assertRegExp('/333/', $ret);
+
+        // get colorful text
+        $ret = $m->getHTML();
+        $this->assertRegExp('/TestIt/', $ret);
+        $this->assertRegExp('/PrevError/', $ret);
+        $this->assertRegExp('/333/', $ret);
 
         // to string
         $ret = $m->toString(1);
@@ -45,6 +54,23 @@ class ExceptionTest extends \PHPUnit_Framework_TestCase
         $a->name = 'foo';
         $ret = $m->toString($a);
         $this->assertEquals('atk4\core\tests\TrackableMock2 (foo)', $ret);
+    }
+
+    public function testMore()
+    {
+        $m = new \Exception('Classic Exception');
+
+        $m = new Exception('atk4 exception', null, $m);
+        $m->setMessage('bumbum');
+
+        $ret = $m->getColorfulText();
+        $this->assertRegExp('/Classic/', $ret);
+        $this->assertRegExp('/bumbum/', $ret);
+
+        // get colorful text
+        $ret = $m->getHTML();
+        $this->assertRegExp('/Classic/', $ret);
+        $this->assertRegExp('/bumbum/', $ret);
     }
 }
 

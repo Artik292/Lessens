@@ -1,3 +1,24 @@
+# 1.3
+
+This release refactors FactoryTrait in a way that may not be backwards compatible, so upgrade with care.
+
+ - Implemented a consistent [Seed Support](http://agile-core.readthedocs.io/en/develop/factory.html#seed)
+ - Changed [how "namespaces" prefixing work](http://agile-core.readthedocs.io/en/develop/factory.html#namespace)
+ - Refactored [DebugTrait, now PSR-3 friedly](http://agile-core.readthedocs.io/en/develop/debug.html)
+ - Added [documentation index](http://agile-core.readthedocs.io/en/develop/index.html)
+ - Migrated to CodeCov and achieved 100% test coverage
+ - Added brief [documentation for debugTraceChange](http://agile-core.readthedocs.io/en/develop/debug.html#debugtracechange)
+
+### Minor releases (in reverse order)
+
+#### 1.3.1
+
+- Added implementation for [seed mering](http://agile-core.readthedocs.io/en/develop/factory.html#seed-merging)
+- Fix the way how setDefaults treats numeric arguments #63
+
+#### 1.1.2
+
+
 ## 1.2.2
 
 Added DIContainerTrait and documented

@@ -1,26 +1,57 @@
 <?PHP
 
 require 'vendor/autoload.php';
-$app = new \atk4\ui\App('Space');
-$app->initLayout('Centered');
+$app = new \atk4\ui\App('Beautiful links');
+$layout = $app->initLayout('Centered');
+$view = $app->layout->add([
+	'View',
+	'LINK TO PHP FILE'
+]);
+$view->link(['4_2', 'id'=>123, 'name'=>'John']);  //если не указывать куда, то ссылается сам на себя
 
-$img = 'https://www.nasa.gov/sites/default/files/thumbnails/image/ocs_iss_0.jpg';
-$button = $app->add(['Label', 'hello world','image'=>$img]);
-$button->set(['massive'=>true]);
-$button->link('http://google.com/');
+$button1 = $app->layout->add(
+	['Button', 'LINK TO 	TEXT FILE','iconRight'=>'book']
+);
+$button1->link('4_text.txt');
+$button1->addClass('mini red');
 
-$label = $app->add(['Label', 'hello world']);
-$label->link('https://google.com/');
+$button2 = $app->layout->add(['Button', 'LINK TO 	PDF FILE','iconRight'=>'student']);
+$button2->link('4_pdf.pdf');
+$button2->addClass('medium green');
 
-$app->add(['Label', 'МКС', 'image'=>$img,'Huge'=>true,'massive'=>true]);
+$button3 = $app->layout->add(['Button', 'LINK TO 	FOTO','iconRight'=>'image']);
+$button3->link('4_image.jpg');
+$button3->addClass('big blue');
 
-$text = $app->add(['Text', 'Некий текст']);
+$button4 = $app->layout->add(['Button', 'LINK TO 	WEB-SITE','iconRight'=>'idea']);
+$button4->link('https://semantic-ui.com/elements/icon.html');
+$button4->addClass('massive pink');
 
-$text = $app->add('Text')
-    ->addParagraph('Первый')
-    ->addParagraph('Второй');
 
-$message = new \atk4\ui\Message('Message Title');
-$app->add($message);
 
-$icon = $app->add(['Image', $img, 'disabled']);
+
+
+/*
+require 'vendor/autoload.php';
+$app = new \atk4\ui\App('Links');
+$layout = $app->initLayout('Centered');
+$view = $app->layout->add([
+	'View',
+	'LINK TO PHP FILE'
+]);
+$view->link(['4_2', 'id'=>123, 'name'=>'John']);  //если не указывать куда, то ссылается сам на себя
+
+$button1 = $app->layout->add(
+	['Button', 'LINK TO 	TEXT FILE','iconRight'=>'book']
+);
+$button1->link('4_text.txt');
+
+$button2 = $app->layout->add(['Button', 'LINK TO 	PDF FILE','iconRight'=>'student']);
+$button2->link('4_pdf.pdf');
+
+$button3 = $app->layout->add(['Button', 'LINK TO 	FOTO','iconRight'=>'image']);
+$button3->link('4_image.jpg');
+
+$button4 = $app->layout->add(['Button', 'LINK TO 	WEB-SITE','iconRight'=>'idea']);
+$button4->link('https://semantic-ui.com/elements/icon.html');
+*/

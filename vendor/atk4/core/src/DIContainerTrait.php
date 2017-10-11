@@ -42,46 +42,50 @@ trait DIContainerTrait
      * developer to pass Dependency Injector Container.
      *
      * @param array $properties
-     * @param bool  $strict     - should we raise exceptions?
+     * @param bool  $pasively   if true, existing non-null argument values will be kept
      */
-    public function setDefaults($properties = [], $strict = false)
+    public function setDefaults($properties = [], $passively = false)
     {
         if ($properties === null) {
             $properties = [];
         }
 
         foreach ($properties as $key => $val) {
-            if (property_exists($this, $key)) {
+            if (!is_numeric($key) && property_exists($this, $key)) {
+                if ($passively && $this->$key !== null) {
+                    continue;
+                }
                 if (is_array($val)) {
                     $this->$key = array_merge(isset($this->$key) && is_array($this->$key) ? $this->$key : [], $val);
                 } elseif ($val !== null) {
                     $this->$key = $val;
                 }
             } else {
-                $this->setMissingProperty($key, $val, $strict);
+                $this->setMissingProperty($key, $val);
             }
         }
     }
 
     /**
      * Sets object property.
-     * Throws exception if $strict.
+     * Throws exception.
      *
      * @param mixed $key
      * @param mixed $value
      * @param bool  $strict
      */
-    protected function setMissingProperty($key, $value, $strict = false)
+    protected function setMissingProperty($key, $value)
     {
-        if ($strict) {
-            throw new Exception([
-                'Property for specified object is not defined',
-                'object'  => $this,
-                'property'=> $key,
-                'value'   => $value,
-            ]);
+        // ignore numeric properties by default
+        if (is_numeric($key)) {
+            return;
         }
 
-        $this->key = $value;
+        throw new Exception([
+            'Property for specified object is not defined',
+            'object'  => $this,
+            'property'=> $key,
+            'value'   => $value,
+        ]);
     }
 }
