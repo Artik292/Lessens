@@ -6,7 +6,7 @@ require 'vendor/autoload.php';
 $app = new \atk4\ui\App('Links');
 $layout = $app->initLayout('Centered');
 
-/*$button1 = $app->layout->add(
+$button1 = $app->layout->add(
 	['Button', 'LINK TO 	TEXT FILE','iconRight'=>'book']
 );
 //$button1->link('4_text.txt');
@@ -21,4 +21,4 @@ $button4 = $app->layout->add(['Button', 'LINK TO 	WEB-SITE','iconRight'=>'idea']
 $button4->link('https://semantic-ui.com/elements/icon.html');
 
 $button5 = $app->layout->add(['Button','UPGRADE','icon'=>'space shuttle']);
-$button5->link(['beatiful']); */
+$button5->link(['beatiful']); 
