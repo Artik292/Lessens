@@ -1,10 +1,12 @@
 <?PHP
 
-require 'vendor/autoload.php';
+echo 'Work';
+
+/*require 'vendor/autoload.php';
 $app = new \atk4\ui\App('Links');
 $layout = $app->initLayout('Centered');
 
-/*$button1 = $app->layout->add(
+$button1 = $app->layout->add(
 	['Button', 'LINK TO 	TEXT FILE','iconRight'=>'book']
 );
 //$button1->link('4_text.txt');
