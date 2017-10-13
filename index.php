@@ -1,7 +1,5 @@
 <?PHP
 
-echo 'Work';
-
 require 'vendor/autoload.php';
 $app = new \atk4\ui\App('Links');
 $layout = $app->initLayout('Centered');
