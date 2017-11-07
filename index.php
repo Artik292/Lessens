@@ -23,7 +23,7 @@ $text = $app->add('Text')
 $message = new \atk4\ui\Message('Message Title');
 $app->add($message);
 
-$icon = $app->add(['Image', $img, 'disabled']);
+$icon = $app->add(['Image', $img, 'enabled']);
 
 /*$button = new Button('Link to program');
 $button->addClass('big');
