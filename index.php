@@ -5,7 +5,7 @@ $app = new \atk4\ui\App('Space');
 $app->initLayout('Centered');
 
 $img = 'https://www.nasa.gov/sites/default/files/thumbnails/image/ocs_iss_0.jpg';
-$button = $app->add(['Label', 'hello world','image'=>$img]);
+$button = $app->add(['Button', 'hello world','image'=>$img]);
 $button->set(['massive'=>true]);
 $button->link('http://google.com/');
 
